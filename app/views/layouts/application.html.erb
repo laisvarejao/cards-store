@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Cards Store</title>
-  <%= stylesheet_link_tag  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>CARDS STORE</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
+          <form class="navbar-form navbar-left" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+              <span class="input-group-addon" id="basic-addon2">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.navbar-collapse -->
+    </nav>
 
-</body>
+    <div class="row text-center">
+    <!-- Jumbotron Header -->
+      <header class="jumbotron">
+        <h1><%= link_to "CARDS STORE", root_path %></h1>
+      </header>
+
+     <hr>
+
+   </div>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row text-center">
+        <%= yield %>
+      </div>
+    </div>
+    <!-- /.container -->
+  
+  </body>
+
 </html>
