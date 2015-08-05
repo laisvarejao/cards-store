@@ -6,7 +6,9 @@
   </div>
 </div>
 
-<table>
+<%= link_to 'New Product', new_product_path, class: "btn pull-right btn-default" %>
+
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -33,5 +35,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>
