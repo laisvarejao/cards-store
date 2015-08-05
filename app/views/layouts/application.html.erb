@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BY Marilia Dias</title>
+    <title>BY MARILIA DIAS</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -32,7 +32,7 @@
           <li>
             <%= link_to cart_path do %>
               <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              <span class="cart-size"><%= "(#{current_order.order_items.size})" %></span>
+              <span class="cart-size"><span class="cart-text"><%= render 'layouts/cart_text' %></span></span>
             <% end %>
           </li>
         </ul>
